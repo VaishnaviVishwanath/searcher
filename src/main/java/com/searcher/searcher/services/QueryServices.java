@@ -275,9 +275,7 @@ public class QueryServices {
 				System.out.println("===debug===invoking fallback"); 
 				this.getFallbackSearchResults(dbName, index,query,paginateInfo,searchResult);		
  			}
-			
 		}
-		
 	   this.sendDataEvent(searchResult,index,query);	
 	   System.out.println("printing from vscode temp");
 	//    System.out.println("===debug====searchResult"+searchResult);	
