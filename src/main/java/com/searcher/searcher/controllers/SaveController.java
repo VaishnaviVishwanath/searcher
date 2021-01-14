@@ -77,6 +77,12 @@ public class SaveController {
 		return new ResponseEntity<ArrayList<String>>(resp,HttpStatus.OK);
 	}
 	
+	@GetMapping (path="/getDbForAppId")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	public ResponseEntity<String> getDbForAppId(@RequestParam (value="appId",required=true) String appId){
+		String dbName = saveServices.getDbForAppId(appId);
+		return new ResponseEntity<String>(dbName,HttpStatus.OK);
+	}
 
 
 }
